@@ -26,17 +26,30 @@ class ArbitraryDataHandler(BaseHandler):
 
     return { 'user': user, 'data_length': len(data) }
 
-class TrayDataHandler(BaseHandler):
+class TrayRandomHandler(BaseHandler):
   ''' takes orders from the user and sends them to Ordr.in '''
   methods_allowed = ('POST', )
 
-  #def create(self, request, tray_id):
   def create(self, request):
 
     response = make_random_order()
     pprint(response)
     return response
-    #make_order_with_tray_id(2)
+
+
+class TrayDataHandler(BaseHandler):
+  ''' takes orders from the user and sends them to Ordr.in '''
+  methods_allowed = ('POST', )
+
+  #def create(self, request, tray_num):
+  def create(self, request, tray_num):
+
+    #tray_num = username
+    print "received ID: %s" % tray_num
+
+    response = make_order_with_tray_id(tray_num)
+    pprint(response)
+    return response
 
     #return 'OH HERRO'
     #return { 'user': user, 'data_length': len(data) }
