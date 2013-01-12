@@ -1,5 +1,14 @@
 Django==1.4.3
 South==0.7.6
 distribute==0.6.31
+dj-database-url==0.2.1
+-e hg+https://bitbucket.org/j00bar/django-piston@866df21d2f6a0cd83d8893a90b2a9955d952a82b#egg=django_piston-dev
+django-tastypie==0.9.11
+gunicorn==0.17.2
+ipython==0.13.1
+mimeparse==0.1.3
+ordrin==0.1.5
 psycopg2==2.4.6
+python-dateutil==1.5
+requests==1.1.0
 wsgiref==0.1.2
